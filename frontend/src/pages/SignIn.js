@@ -25,7 +25,7 @@ const {login} = useAuth()
     const signin = async () => {
         console.log("Sing In funtion called");
         try {
-            const response = await fetch(`${API_URL}/api/users/login`, {
+            const response = await fetch(`/api/users/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

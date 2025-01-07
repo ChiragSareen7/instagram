@@ -13,7 +13,7 @@ function PostDetailPage({ isPostDetailModal, onClose, feed ,handleAddComment,new
                 try{
 
                 
-                const response = await fetch(`${API_URL}/api/posts/getComments/${feed.id}`)
+                const response = await fetch(`/api/posts/getComments/${feed.id}`)
                 if (!response.ok) {
                     throw new Error(response.statusText)
                 }

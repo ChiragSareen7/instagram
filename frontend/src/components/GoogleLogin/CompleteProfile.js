@@ -8,7 +8,7 @@ export default function CompleteProfile() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await fetch(`${API_URL}/api/users/complete-profile`, {
+            const res = await fetch(`/api/users/complete-profile`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

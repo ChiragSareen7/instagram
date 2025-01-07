@@ -27,7 +27,7 @@ const FeedCard = ({ feed, onLike, onUnlike, currentUserId, updateNewPost }) => {
         if (!newComment.trim()) return;
 
         try {
-            const response = await fetch(`${API_URL}/api/posts/addComments`, {
+            const response = await fetch(`/api/posts/addComments`, {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`,

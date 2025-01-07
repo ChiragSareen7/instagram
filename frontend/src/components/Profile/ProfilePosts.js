@@ -18,7 +18,7 @@ const ProfilePosts = ({ posts, updateNewPost, user }) => {
 
     const deletePost = async () => {
         try {
-            const response = await fetch(`${API_URL}/api/posts/delete/${selectedPost}`, {
+            const response = await fetch(`/api/posts/delete/${selectedPost}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",

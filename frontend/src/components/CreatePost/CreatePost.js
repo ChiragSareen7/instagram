@@ -21,7 +21,7 @@ const CreatePost = ({ closeModal,updateNewPost }) => {
     const handleShare = async () => {
        if(selectedImage && caption && hashtag){
         try{
-            const response = await fetch(`${API_URL}/api/posts/create`,{
+            const response = await fetch(`/api/posts/create`,{
                 method:"POST",
                 headers:{
                     "Authorization":`Bearer ${localStorage.getItem("token")}`,

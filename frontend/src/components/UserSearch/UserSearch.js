@@ -17,7 +17,7 @@ export default function UserSearch() {
     setLoading(true);
     try {
       const response = await fetch(
-        ` ${API_URL}/api/users/search?query=${searchTerm}`
+        `/api/users/search?query=${searchTerm}`
       );
       if (!response.ok) {
         throw new Error('Network Response is not Ok');

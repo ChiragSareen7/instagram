@@ -11,7 +11,7 @@ const Feed = ({ newPost, updateNewPost }) => {
     const fetchFeeds = async () => {
       try {
         const response = await fetch(
-          `${API_URL}/api/posts/getAll?page=${page}&limit=2`
+          `/api/posts/getAll?page=${page}&limit=2`
         );
         if (!response.ok) {
           throw new Error('Networt Response is not Ok');
@@ -31,7 +31,7 @@ const Feed = ({ newPost, updateNewPost }) => {
 
   const likePost = async (id) => {
     try {
-      const response = await fetch(`${API_URL}/api/posts/like`, {
+      const response = await fetch(`/api/posts/like`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',
@@ -49,7 +49,7 @@ const Feed = ({ newPost, updateNewPost }) => {
 
   const unlikePost = async (id) => {
     try {
-      const response = await fetch(`${API_URL}/api/posts/unlike`, {
+      const response = await fetch(`/api/posts/unlike`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',

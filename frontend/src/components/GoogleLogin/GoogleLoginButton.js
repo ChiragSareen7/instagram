@@ -21,7 +21,7 @@ const GoogleLoginButton = () => {
                 Photo,
                 email_verified
             });
-            const res = await fetch(`${API_URL}/api/users/google`, {
+            const res = await fetch(`/api/users/google`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
